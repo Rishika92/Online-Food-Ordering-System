@@ -1,4 +1,4 @@
-🌟 Online Food Ordering System
+🌟 Online Food Ordering System:
 An online food ordering website built with PHP, MySQL, HTML, CSS (Bootstrap). This system allows users to browse food categories, search for food items, place orders, and receive order confirmations. Admin can manage categories, foods, and orders from the backend.
 
 ✅ Key Features:
