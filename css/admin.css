@@ -1,0 +1,311 @@
+/*
+Author: Rishika Arisetty;
+theme: food order website admin;
+version: 1.0;
+*/
+/*
+    Admin page CSS
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .wrapper {
+    padding: 1%;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .clearfix {
+    float: none;
+    clear: both;
+  }
+  
+  .tbl-full{
+    width: 100%;
+  }
+  
+  .tbl-30{
+    width: 30%;
+  }
+  table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+    text-align: left;
+  }
+  
+  table tr td{
+    padding: 1%;
+  }
+  
+  .btn-primary{
+    background-color: #1e90ff;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-primary:hover{
+    background-color: #3742fa;
+  }
+  
+  .btn-secondary{
+    background-color: #7bed9f;
+    padding: 1%;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-secondary:hover{
+    background-color: #2ed573;
+  }
+  
+  .btn-danger{
+    background-color: #ff6b81;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .btn-danger:hover{
+    background-color: #ff4757;
+  }
+  
+  /* Menu CSS*/
+  .menu {
+    border-bottom: 1px solid grey;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+  }
+  .menu ul li {
+    display: inline;
+    padding: 1%;
+  }
+  .menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff6b81;
+  }
+  .menu ul li a:hover {
+    color: #ff4757;
+  }
+  
+  /*Main CSS*/
+  .main-content {
+    background-color: #f1f2f6;
+    padding: 3% 0;
+  }
+  
+  .col-4 {
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+  }
+  
+  
+  
+  
+  .success {
+    color: #1ed268;
+    font-weight:bold ;
+  
+  }
+  .error{
+    color: #ff4757;
+    font-weight:bold ;
+  }
+
+  
+  /*Login CSS*/
+  .login {
+    border: 1px solid grey;
+    width: 20%;
+    margin: 10% auto;
+    padding: 2%;
+  }
+  
+  .infolink:before
+  {
+    content: '?';
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 1.8ex;
+    height: 1.8ex;
+    font-size: 1.4ex;
+    line-height: 1.8ex;
+    border-radius: 1.2ex;
+    margin-right: 4px;
+    padding: 1px;
+    color: blue;
+    background: white;
+    border: 1px solid blue;
+    text-decoration: none;
+  }
+  
+  .infolink:hover:before
+  {
+    color: white;
+    background: blue;
+    border-color: white;
+    text-decoration: none;
+  }
+  
+  /* The container must be positioned relative: */
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+  }
+  
+  .custom-select select {
+    display: none; /*hide original SELECT element: */
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /* Style the arrow inside the select element: */
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /* Point the arrow upwards when the select box is open (active): */
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /* style the items (options), including the selected item: */
+  .select-items div,.select-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+  
+  /* Style items (options): */
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+  
+  /* Hide the items when the select box is closed: */
+  .select-hide {
+    display: none;
+  
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .footer {
+    position: fixed;
+    height: 65px;
+    bottom: 0;
+    width: 100%;
+    background-color: #ff4757;
+    color: white;
+    margin-top: 100px;
+  }
+
+.login-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* peach to soft pink */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Login container */
+  .login-page .login-container {
+    background: #fff5f5; /* soft blush background */
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(255, 105, 97, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Heading */
+  .login-page .login-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #ff6f61; /* watermelon red */
+  }
+  
+  /* Input group */
+  .login-page .input-group {
+    margin-bottom: 18px;
+  }
+  
+  .login-page .input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #c94c4c; /* deeper peach */
+  }
+  
+  .login-page .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f5b7b1;
+    border-radius: 10px;
+    transition: border 0.3s;
+    background-color: #fff0f0;
+  }
+  
+  .login-page .input-group input:focus {
+    border-color: #ff6f61;
+    outline: none;
+  }
+  
+  /* Button */
+  .login-page .login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6f61; /* watermelon */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-page .login-btn:hover {
+    background-color: #e85c50;
+  }
+  
+
+
+
+
+
+ 

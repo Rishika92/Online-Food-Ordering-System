@@ -1,0 +1,67 @@
+-- tbl_admin
+CREATE TABLE tbl_admin (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100),
+    username VARCHAR(100),
+    password VARCHAR(255)
+);
+
+-- tbl_category
+CREATE TABLE tbl_category (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100),
+    image_name VARCHAR(255),
+    featured VARCHAR(10),
+    active VARCHAR(10)
+);
+
+-- tbl_food
+CREATE TABLE tbl_food (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(100),
+    description TEXT,
+    price DECIMAL(10,2),
+    image_name VARCHAR(255),
+    category_id INT(10) UNSIGNED,
+    featured VARCHAR(10),
+    active VARCHAR(10),
+    FOREIGN KEY (category_id) REFERENCES tbl_category(id)
+);
+
+-- tbl_coupon
+CREATE TABLE tbl_coupon (
+    Coupon_ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    Code VARCHAR(50),
+    Discount_Percent DECIMAL(5,2),
+    Min_Order_Value DECIMAL(10,2),
+    Expiry_Date DATE
+);
+
+-- tbl_order
+CREATE TABLE tbl_order (
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    food VARCHAR(150),
+    price DECIMAL(10,2),
+    qty INT(11),
+    total DECIMAL(10,2),
+    order_date DATETIME,
+    status VARCHAR(50),
+    customer_name VARCHAR(150),
+    customer_contact VARCHAR(20),
+    customer_email VARCHAR(150),
+    customer_address VARCHAR(255),
+    payment_id INT(11),
+    coupon_id INT(11),
+    FOREIGN KEY (coupon_id) REFERENCES tbl_coupon(Coupon_ID)
+);
+
+-- tbl_payment
+CREATE TABLE tbl_payment (
+    payment_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    order_id INT(10) UNSIGNED,
+    Payment_Method ENUM('COD', 'Credit Card', 'PayPal'),
+    Payment_Status ENUM('Pending', 'Completed', 'Failed'),
+    Transaction_ID VARCHAR(255),
+    Payment_Date DATETIME,
+    FOREIGN KEY (order_id) REFERENCES tbl_order(id)
+);
